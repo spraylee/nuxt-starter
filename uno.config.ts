@@ -1,17 +1,12 @@
-import { defineConfig, presetIcons, presetUno } from "unocss";
+import { defineConfig, presetIcons, presetUno, transformerDirectives } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetUno({
-      // work with Mantine theme
-      // dark: {
-      //   dark: '[data-mantine-color-scheme="dark"]',
-      //   light: '[data-mantine-color-scheme="light"]',
-      // },
-    }),
+    presetUno({}),
     presetIcons({
       // autoInstall: true,
-      prefix: "",
+      prefix: '',
     }),
   ],
-});
+  transformers: [transformerDirectives()],
+})

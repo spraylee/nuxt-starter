@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex-none border-b-1px border-solid border-gray-400/20 sticky top-0 bg-light-400 dark:bg-dark-600 box-border"
+    class="flex-none border-b-1px border-solid border-gray-400/20 sticky top-0 bg-light-400 dark:bg-dark-400 box-border z-10"
     :style="headerStyle"
   >
     <div class="h-full flex items-center gap-2 mx-auto" :style="headerInnerStyle">

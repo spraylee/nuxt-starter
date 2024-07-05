@@ -4,4 +4,9 @@
 }
 :root.dark {
   color-scheme: dark;
+  --at-apply: bg-dark-800;
+}
+
+html.sr .load-hidden {
+  visibility: hidden;
 }
