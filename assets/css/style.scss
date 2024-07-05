@@ -1,0 +1,7 @@
+// 适配主题theme
+:root {
+  color-scheme: light;
+}
+:root.dark {
+  color-scheme: dark;
+}
