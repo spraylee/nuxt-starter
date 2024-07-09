@@ -12,4 +12,7 @@ export default defineNuxtConfig({
       script: [{ src: '/init-theme.js' }, { src: '/scrollreveal.js' }],
     },
   },
+  vueuse: {
+    ssrHandlers: true,
+  },
 })

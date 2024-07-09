@@ -1,7 +1,9 @@
-import type ScrollReveal from 'scrollreveal'
+import scrollReveal from 'scrollreveal'
+
+declare const ScrollReveal: scrollReveal.ScrollRevealObject
 
 declare global {
   interface Window {
-    ScrollReveal: ScrollReveal
+    ScrollReveal: scrollReveal.ScrollRevealObject
   }
 }

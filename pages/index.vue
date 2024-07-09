@@ -16,10 +16,8 @@
 <script setup lang="ts">
 const list = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
-onBeforeMount(() => {
-  if (typeof window !== 'undefined') {
-    window.ScrollReveal().reveal('.line')
-  }
+onMounted(() => {
+  window.ScrollReveal().reveal('.line', { reset: true, delay: 100, duration: 1000 })
 })
 
 const deleteByIndex = (i: number) => {
