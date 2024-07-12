@@ -4,11 +4,11 @@
       type="button"
       @click="toggleTheme"
       role="theme-switch"
-      class="w-30px h-30px rounded flex items-center justify-center hover:bg-gray-300/20 transition-colors bg-transparent border-1px border-solid border-gray-400/20"
+      class="w-8 h-8 rounded flex items-center justify-center hover:bg-gray-300/20 transition-colors bg-transparent border-1px border-solid border-gray-400/20"
     >
       <ClientOnly>
-        <div class="tabler:moon text-20px text-gray-600" v-if="!isDark" />
-        <div class="tabler:sun text-20px text-yellow-400" v-else />
+        <div class="tabler:moon text-5 text-gray-600" v-if="!isDark" />
+        <div class="tabler:sun text-5 text-yellow-400" v-else />
       </ClientOnly>
     </button>
   </div>
@@ -31,6 +31,7 @@ const toggleTheme = (event: MouseEvent) => {
   })
 
   transition?.ready.then(() => {
+    // 移动端：顶部有工具栏时，遮罩定位计算会有偏差，遮罩Y轴定位会从顶部工具栏上方就开始计算，导致视觉中心点偏上
     const clipPath = [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`]
     document.documentElement.animate(
       { clipPath: !isDark.value ? [...clipPath].reverse() : clipPath },

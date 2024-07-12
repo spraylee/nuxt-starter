@@ -10,4 +10,5 @@
 // 修复移动端点击 300ms 延迟
 :root {
   touch-action: manipulation;
+  --at-apply: text-base;
 }

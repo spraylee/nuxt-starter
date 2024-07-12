@@ -4,7 +4,7 @@
     :style="headerStyle"
   >
     <div class="h-full flex items-center gap-2 mx-auto" :style="headerInnerStyle">
-      <img src="/favicon.ico" class="h-30px h-30px" />
+      <img src="/favicon.ico" class="h-8 h-8" />
       <h1 class="text-xl font-bold">{{ title }}</h1>
       <div class="mr-auto" />
       <ThemeSwitch />
@@ -15,16 +15,16 @@
 <script setup lang="ts">
 const { contentMaxWidth, height, padding, title } = defineProps<{
   title: string
-  contentMaxWidth?: number | string
-  height?: number | string
-  padding?: number | string
+  contentMaxWidth?: string | null
+  height: string
+  padding?: string | null
 }>()
 const headerStyle = {
-  height: height + 'px',
+  height: height,
 }
 const headerInnerStyle = {
-  maxWidth: typeof contentMaxWidth === 'number' ? contentMaxWidth + 'px' : contentMaxWidth || '100%',
-  paddingLeft: typeof padding === 'number' ? padding + 'px' : padding || '0px',
-  paddingRight: typeof padding === 'number' ? padding + 'px' : padding || '0px',
+  maxWidth: contentMaxWidth || '100%',
+  paddingLeft: padding || '1rem',
+  paddingRight: padding || '1rem',
 }
 </script>
