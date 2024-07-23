@@ -1,11 +1,6 @@
 <template>
   <div>
-    <button
-      type="button"
-      @click="toggleTheme"
-      role="theme-switch"
-      class="w-8 h-8 rounded flex items-center justify-center hover:bg-gray-300/20 transition-colors bg-transparent border-1px border-solid border-gray-400/20"
-    >
+    <button type="button" @click="toggleTheme" role="theme-switch" class="icon-btn">
       <ClientOnly>
         <div class="tabler:moon text-5 text-gray-600" v-if="!isDark" />
         <div class="tabler:sun text-5 text-yellow-400" v-else />

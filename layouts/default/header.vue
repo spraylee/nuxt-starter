@@ -7,6 +7,7 @@
       <img src="/favicon.ico" class="h-8 h-8" />
       <h1 class="text-xl font-bold">{{ title }}</h1>
       <div class="mr-auto" />
+      <FullscreenToggle />
       <ThemeSwitch />
     </div>
   </header>

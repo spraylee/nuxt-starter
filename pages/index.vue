@@ -6,6 +6,7 @@
       </div>
     </div>
     <button class="cell !w-auto" @click="shuffle">打乱</button>
+    <button class="cell !w-auto" @click="setting.setCount(setting.count + 10)">count: {{ setting.count }}</button>
     <div class="rounded gap-20 mb-8" v-for="_ of 3">
       <ScrollRevealSection
         :options="{
@@ -22,17 +23,12 @@
         nostrum eligendi quasi id officiis consectetur, incidunt illum asperiores soluta maiores facere aut adipisci
         nihil error.
       </div>
-      <!-- <ScrollRevealSection :options="{ reset: true, duration: 5 }">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores dolor impedit. Molestiae aliquid
-        nostrum eligendi quasi id officiis consectetur, incidunt illum asperiores soluta maiores facere aut adipisci
-        nihil error.
-      </ScrollRevealSection> -->
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const list = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+const list = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
 
 const deleteByIndex = (i: number) => {
   list.value.splice(i, 1)
@@ -41,6 +37,8 @@ const deleteByIndex = (i: number) => {
 const shuffle = () => {
   list.value = list.value.sort(() => Math.random() - 0.5)
 }
+
+const setting = useSettingStore()
 </script>
 
 <style scoped>

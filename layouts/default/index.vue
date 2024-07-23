@@ -36,7 +36,7 @@ interface LayoutConfig {
   title: string
 }
 const { contentMaxWidth, contentMode, padding, title, headerHeight }: LayoutConfig = {
-  contentMode: 'fullscreen',
+  contentMode: 'flow',
   headerHeight: '3.75rem',
   contentMaxWidth: '62.5rem',
   padding: '1rem',

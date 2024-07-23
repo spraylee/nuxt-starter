@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-07-04',
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@formkit/auto-animate/nuxt'],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@formkit/auto-animate/nuxt', '@pinia/nuxt'],
   css: ['@unocss/reset/tailwind-compat.css', '~/assets/css/style.scss'],
   app: {
     head: {
